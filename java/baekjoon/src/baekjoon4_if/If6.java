@@ -6,12 +6,13 @@ public class If6 {
     public static void main(String args[]) {
         Scanner reader = new Scanner(System.in);
         int n = reader.nextInt();
-        int cycles = 0;
-        int k;
-        do {
-            k = (n / 10 + n % 10) % 10 + (n % 10) * 10;
+        int cycles = 1;
+        int k = (n / 10 + n % 10) % 10 + (n % 10) * 10;
+        while (k != n) {
+            int newK = (k / 10 + k % 10) % 10 + (k % 10) * 10;
+            k = newK;
             cycles++;
-        } while (k != n);
+        }
 
         System.out.print(cycles);
     }

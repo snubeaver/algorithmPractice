@@ -11,15 +11,14 @@ public class If5 {
         for (int i = 0; i < n; i++) {
 
             int students = reader.nextInt();
-            //
+
             int sum = 0;
             int[] scores = new int[students];
             for (int j = 0; j < students; j++) {
                 scores[j] = reader.nextInt();
-                //System.out.print(j);
                 sum += scores[j];
             }
-            //System.out.print(sum);
+
             int higher = 0;
             for (int k = 0; k < students; k++) {
                 if (scores[k] > (float) sum / students) {
@@ -29,9 +28,9 @@ public class If5 {
 
             reader.nextLine();
 
-            System.out.println();
+//            System.out.println();
             System.out.printf("%.3f", (float)higher / students * 100);
-            System.out.print("%");
+            System.out.print("%\n");
         }
     }
 }
