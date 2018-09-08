@@ -8,6 +8,7 @@ public class B10828 {
         int commandCtr = scanner.nextInt();
 
         for(int i = 0; i < commandCtr; i++) {
+
             String command = scanner.next();
             switch (command) {
                 case "push":
@@ -27,6 +28,8 @@ public class B10828 {
                 System.out.println(stack.isEmpty()? -1:stack.peek());
                 break;
             }
+            
         }
+        scanner.close();
     }
 }
